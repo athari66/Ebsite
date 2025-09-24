@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Bahasa Indonesia - Portal Pembelajaran Interaktif</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-book-open"></i>
+                <span>BahasaKu</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Beranda</a></li>
+                <li><a href="#materi" class="nav-link">Materi</a></li>
+                <li><a href="#quiz" class="nav-link">Kuis</a></li>
+                <li><a href="#essay" class="nav-link">Esai</a></li>
+                <li><a href="#about" class="nav-link">Tentang</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-word">Belajar</span>
+                    <span class="title-word">Bahasa</span>
+                    <span class="title-word">Indonesia</span>
+                </h1>
+                <p class="hero-subtitle">Portal pembelajaran interaktif untuk menguasai bahasa Indonesia dengan mudah dan menyenangkan</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('materi')">
+                        <i class="fas fa-play"></i>
+                        Mulai Belajar
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('quiz')">
+                        <i class="fas fa-question-circle"></i>
+                        Latihan Soal
+                    </button>
+                </div>
+            </div>
+            <div class="hero-illustration">
+                <img src="https://via.placeholder.com/400x300/F04770/FFFFFF?text=Belajar" alt="Learning Illustration">
+            </div>
+        </div>
+    </section>
+
+    <!-- Materi Section -->
+    <section id="materi" class="materi-section">
+        <div class="container">
+            <h2 class="section-title">Materi Pembelajaran</h2>
+            <div class="materi-grid">
+                <div class="materi-card" data-materi="tata-bahasa">
+                    <div class="card-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>Tata Bahasa</h3>
+                    <p>Pelajari struktur dan aturan bahasa Indonesia yang benar</p>
+                    <button class="card-btn" onclick="openMateri('tata-bahasa')">Pelajari</button>
+                </div>
+                
+                <div class="materi-card" data-materi="kosa-kata">
+                    <div class="card-icon">
+                        <i class="fas fa-spell-check"></i>
+                    </div>
+                    <h3>Kosa Kata</h3>
+                    <p>Perkaya perbendaharaan kata bahasa Indonesia Anda</p>
+                    <button class="card-btn" onclick="openMateri('kosa-kata')">Pelajari</button>
+                </div>
+                
+                <div class="materi-card" data-materi="ejaan">
+                    <div class="card-icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <h3>Ejaan</h3>
+                    <p>Pahami aturan penulisan dan ejaan yang disempurnakan</p>
+                    <button class="card-btn" onclick="openMateri('ejaan')">Pelajari</button>
+                </div>
+                
+                <div class="materi-card" data-materi="sastra">
+                    <div class="card-icon">
+                        <i class="fas fa-feather-alt"></i>
+                    </div>
+                    <h3>Sastra</h3>
+                    <p>Jelajahi keindahan karya sastra Indonesia</p>
+                    <button class="card-btn" onclick="openMateri('sastra')">Pelajari</button>
+                </div>
+                <div class="materi-card" data-materi="menulis">
+                    <div class="card-icon">
+                        <i class="fas fa-pen-nib"></i>
+                    </div>
+                    <h3>Menulis Kreatif</h3>
+                    <p>Kembangkan kemampuan menulis cerita dan esai</p>
+                    <button class="card-btn" onclick="openMateri('menulis')">Pelajari</button>
+                </div>
+                <div class="materi-card" data-materi="berbicara">
+                    <div class="card-icon">
+                        <i class="fas fa-microphone-alt"></i>
+                    </div>
+                    <h3>Berbicara Efektif</h3>
+                    <p>Tingkatkan kepercayaan diri dalam berbicara di depan umum</p>
+                    <button class="card-btn" onclick="openMateri('berbicara')">Pelajari</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="quiz-section">
+        <div class="container">
+            <h2 class="section-title">Latihan Soal Pilihan Ganda</h2>
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <h3 id="quiz-title">Pilih Jenis Kuis</h3>
+                    <div class="quiz-categories">
+                        <button class="quiz-category-btn active" data-category="tata-bahasa">Tata Bahasa</button>
+                        <button class="quiz-category-btn" data-category="kosa-kata">Kosa Kata</button>
+                        <button class="quiz-category-btn" data-category="ejaan">Ejaan</button>
+                        <button class="quiz-category-btn" data-category="sastra">Sastra</button>
+                    </div>
+                </div>
+                
+                <div class="quiz-content">
+                    <div class="quiz-question" id="quiz-question">
+                        <p>Pilih kategori kuis untuk memulai latihan!</p>
+                    </div>
+                    <div class="quiz-options" id="quiz-options">
+                        <!-- Options will be populated by JavaScript -->
+                    </div>
+                    <div class="quiz-controls">
+                        <button class="btn btn-primary" id="next-btn" onclick="nextQuestion()" disabled>Selanjutnya</button>
+                        <button class="btn btn-secondary" id="submit-btn" onclick="submitQuiz()" disabled>Selesai</button>
+                    </div>
+                </div>
+                
+                <div class="quiz-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <span class="progress-text" id="progress-text">0/10</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Essay Section -->
+    <section id="essay" class="essay-section">
+        <div class="container">
+            <h2 class="section-title">Latihan Menulis Esai</h2>
+            <div class="essay-container">
+                <div class="essay-header">
+                    <h3 id="essay-title">Pilih Topik Esai</h3>
+                    <div class="essay-categories">
+                        <button class="essay-category-btn active" data-category="pendidikan">Pendidikan</button>
+                        <button class="essay-category-btn" data-category="lingkungan">Lingkungan</button>
+                        <button class="essay-category-btn" data-category="teknologi">Teknologi</button>
+                        <button class="essay-category-btn" data-category="sosial">Sosial Budaya</button>
+                    </div>
+                </div>
+                <div class="essay-content">
+                    <div class="essay-prompt" id="essay-prompt">
+                        <p>Pilih topik esai untuk memulai latihan menulis!</p>
+                    </div>
+                    <textarea id="essay-textarea" placeholder="Tulis esai Anda di sini..." rows="15"></textarea>
+                    <div class="essay-controls">
+                        <button class="btn btn-primary" id="submit-essay-btn" onclick="submitEssay()">Kirim Esai</button>
+                        <button class="btn btn-secondary" id="reset-essay-btn" onclick="resetEssay()">Reset</button>
+                    </div>
+                    <div class="essay-feedback" id="essay-feedback">
+                        <!-- Feedback will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">Tentang Portal Ini</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Portal pembelajaran bahasa Indonesia ini dirancang untuk membantu siswa dan mahasiswa dalam memahami dan menguasai bahasa Indonesia dengan cara yang interaktif dan menyenangkan.</p>
+                    <p>Dengan materi yang lengkap dan latihan soal yang bervariasi, Anda dapat meningkatkan kemampuan berbahasa Indonesia secara bertahap.</p>
+                </div>
+                <div class="about-features">
+                    <div class="feature">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h4>Materi Lengkap</h4>
+                        <p>Konten pembelajaran yang komprehensif</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-gamepad"></i>
+                        <h4>Kuis Interaktif</h4>
+                        <p>Belajar sambil bermain dengan kuis pilihan ganda</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-pen-alt"></i>
+                        <h4>Latihan Esai</h4>
+                        <p>Asah kemampuan menulis dengan berbagai topik</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Pelacakan Progres</h4>
+                        <p>Pantau perkembangan belajar Anda</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h4>Responsif</h4>
+                        <p>Akses dari berbagai perangkat</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-users"></i>
+                        <h4>Komunitas</h4>
+                        <p>Berinteraksi dengan sesama pembelajar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BahasaKu</h3>
+                    <p>Portal pembelajaran bahasa Indonesia terbaik untuk semua kalangan.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#materi">Materi</a></li>
+                        <li><a href="#quiz">Kuis</a></li>
+                        <li><a href="#essay">Esai</a></li>
+                        <li><a href="#about">Tentang</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <p><i class="fas fa-envelope"></i> info@bahasaku.com</p>
+                    <p><i class="fas fa-phone"></i> +62 123 456 789</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BahasaKu. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Materi Modal -->
+    <div id="materi-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeMateri()">&times;</span>
+            <div id="materi-content">
+                <!-- Materi content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
